@@ -1,23 +1,27 @@
-1�����Ƚ�����Ŀ�ļ��У�ͨ������ git init �����Ŀ¼���git���Թ����Ĳֿ�
+1、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库
 git init
 
-2�����ļ����ӵ��汾���У�ʹ������ git add .���ӵ��ݴ�������ȥ����Ҫ���Ǻ����С���㡰.������Ϊ�����ļ����µ������ļ�
+2、把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件
 git add .
 
-3�������� git commit����Git�����ļ��ύ���ֿ⡣������Ϊ�ύ˵��
+3、用命令 git commit告诉Git，把文件提交到仓库。引号内为提交说明
 git commit -m 'first commit'
 
-4��������Զ�̿�
-git remote add origin ���Զ�̿��ַ
-�磺
+4、关联到远程库
+git remote add origin 你的远程库地址
+如：
 git remote add origin https://github.com/huangjie314/GitHub-Use.git
-���� git remote add origin git@github.com:haungjie314/GitHub-Use.git
+或者 git remote add origin git@github.com:haungjie314/GitHub-Use.git
 
-5����ȡԶ�̿��뱾��ͬ���ϲ������Զ�̿ⲻΪ�ձ�������һ�������������ύ��ʧ�ܣ�
+5、获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）
 git pull --rebase origin master
 
-6���ѱ��ؿ���������͵�Զ�̣�ʹ�� git push���ʵ�����ǰѵ�ǰ��֧master���͵�Զ�̡�ִ�д�������Ҫ�������û��������룬��֤ͨ���󼴿�ʼ�ϴ���
+6、把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。
 git push -u origin master
 
-*��״̬��ѯ����
+*、状态查询命令
 git status
+
+--------------------------------------------------------------------------------------------------------
+如何取消一个目录的git初始化？
+执行rm -rf .git 删掉.git文件即可
